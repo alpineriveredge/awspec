@@ -90,6 +90,7 @@
 | [waf_web_acl](#waf_web_acl)
 | [wafregional_web_acl](#wafregional_web_acl)
 | [wafv2_ip_set](#wafv2_ip_set)
+| [wafv2_web_acl](#wafv2_web_acl)
 | [account](#account)
 
 ## <a name="acm">acm</a>
@@ -4325,6 +4326,21 @@ end
 ```
 
 ### its(:name), its(:id), its(:arn), its(:description), its(:ip_address_version), its(:addresses)
+## <a name="wafv2_web_acl">wafv2_web_acl</a>
+
+Wafv2WebAcl resource type.
+
+### exist
+
+You can set `scope` to CLOUDFRONT or REGIONAL ( default: `REGIONAL` ).
+
+```ruby
+describe wafv2_web_acl('my-wafv2-web-acl'), scope: 'REGIONAL' do
+  it { should exist }
+end
+```
+
+### its(:name), its(:id), its(:arn), its(:description), its(:capacity), its(:pre_process_firewall_manager_rule_groups), its(:post_process_firewall_manager_rule_groups), its(:managed_by_firewall_manager), its(:label_namespace), its(:custom_response_bodies), its(:captcha_config), its(:challenge_config), its(:token_domains), its(:association_config), its(:retrofitted_by_firewall_manager)
 # Account and Attributes
 
 ## <a name="account">account</a>
