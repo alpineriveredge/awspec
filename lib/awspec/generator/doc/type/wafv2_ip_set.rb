@@ -7,7 +7,7 @@ module Awspec::Generator
         def initialize
           super
           @type_name = 'Wafv2IpSet'
-          @type = Awspec::Type::Wafv2IpSet.new('my-ip-set')
+          @type = Awspec::Type::Wafv2IpSet.new('my-wafv2-ip-set')
           @ret = @type.resource_via_client
           @matchers = []
           @ignore_matchers = []
